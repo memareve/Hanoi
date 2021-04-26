@@ -1,5 +1,5 @@
 def moveTower(level, origin_s, goal_s, auxiliary_s):
-
+    """Hanoi Towers function"""
     if level >= 1:
         moveTower(level-1, origin_s, auxiliary_s, goal_s)
         moveDisk(origin_s, goal_s)
@@ -7,8 +7,15 @@ def moveTower(level, origin_s, goal_s, auxiliary_s):
 
 
 def moveDisk(from_s,to_s):
+    """Printing function"""
     print("moving disk from", from_s, "to", to_s)
 
 
-n = int(input('Enter the number of disks: '))
-moveTower(n, "A", "B", "C")  # A - 1st stick B - 2nd stick C - 3rd stick
+def main():
+    n = int(input('Enter the number of disks: '))
+    if n < 1:
+        print('ERROR')
+        main()
+    moveTower(n, "A", "B", "C")  # A - 1st stick B - 2nd stick C - 3rd stick
+
+main()
