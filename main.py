@@ -7,15 +7,17 @@ def moveTower(level, origin_s, goal_s, auxiliary_s):
 
 
 def moveDisk(from_s,to_s):
-    """Printing function"""
-    print("moving disk from", from_s, "to", to_s)
+    """Print function"""
+    print("shift disk from", from_s, "to", to_s)
 
 
 def main():
+    """Init function"""
     n = int(input('Enter the number of disks: '))
     if n < 1:
         print('ERROR')
         main()
-    moveTower(n, "A", "B", "C")  # A - 1st stick B - 2nd stick C - 3rd stick
+    moveTower(n, "A", "B", "C")  # A - 1st stick B - 2nd stick C - 3rd stick (auxiliary at the beginning)
+
 
 main()
